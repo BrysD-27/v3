@@ -19,7 +19,7 @@
     "jsx": "preserve",
         "baseUrl": ".",
         "paths": {
-          "@/config/*": ["config/*"],
+          "@/*": ["*"],
           "@/components/*": ["app/components/*"]
         },
     "plugins": [
@@ -30,7 +30,6 @@
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
   ],

@@ -1,10 +1,9 @@
-import BackgroundAnimation from "@/components/BackgroundAnimation/background-animation";
-export default function Home() {
+import BackgroundAnimation from "@/app/components/background-animation";
+import Layout from "./components/layout";
+export default function Index() {
   return (
-    <div id="root" className="bg-background text-white font-default">
+    <Layout>
       <BackgroundAnimation />
-      {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-      </footer> */}
-    </div>
-  );
+    </Layout>
+);
 }
