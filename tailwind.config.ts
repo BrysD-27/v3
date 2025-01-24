@@ -20,12 +20,13 @@ export default {
         desktopL: `max-width: 1400px`,
       },
       colors: {
-        foreground: "var(--foreground)",
+        foreground: "var(--color-zinc-300)",
       },
       fontFamily: {
         default: ['Inter var', 'ui-sans-serif', 'system-ui', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
         sans: ['Graphik', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
+        grotesk: ['Space Grotesk', 'sans-serif']
       },
     },
   },

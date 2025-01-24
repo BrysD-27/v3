@@ -1,13 +1,15 @@
 "use client";
-import { GlobalStyling, StyledContent, theme } from "@/styles/globalcomponents";
+import { GlobalStyling, StyledContainer, theme } from "@/styles/globalcomponents";
 import { ThemeProvider } from "styled-components";
 
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <div id="root" className="bg-background text-white font-default">
+      <div id="root" className="font-default">
         <GlobalStyling />
-        <StyledContent>{children}</StyledContent>
+        <StyledContainer>
+          {children}
+        </StyledContainer>
       </div>
     </ThemeProvider>
   );

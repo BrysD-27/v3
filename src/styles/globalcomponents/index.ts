@@ -1,18 +1,50 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyling = createGlobalStyle`
-    #root {
+  #root {
+    max-width: 1280px;
     min-height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-zinc-300);
+
+    @media (min-width: 768px) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .BgAnimation__svg {
+      display: none;
+    }
+  }
+
+  .BgAnimation__svg {
+    position: absolute;
+    top: 0;
+    width: auto;
+    height: auto;
+    @media (min-width: 1024px) {
+      padding-top: 6rem;
+    }
+  }
+  
+  main {
+    @media (min-width: 1024px) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      position: sticky;
+    }
   }
 `
 
-export const StyledContent = styled.div`
+export const StyledContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
+  gap: 1rem;
+  width: 100%;
 `;
 
 export const Section = styled.section`
@@ -36,6 +68,16 @@ export const Section = styled.section`
 
     width: calc(100vw - 32px);
     flex-direction: column;
+  }
+`
+
+export const StyledHeader = styled.header`
+  width: 48%;
+  @media (min-width: 1024px) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    position: relative;
+    position: sticky;
   }
 `
 
