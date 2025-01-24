@@ -1,4 +1,19 @@
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+
+export const GlobalStyling = createGlobalStyle`
+    #root {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 100%;
+  }
+`
+
+export const StyledContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
 
 export const Section = styled.section`
   display: ;
@@ -23,3 +38,18 @@ export const Section = styled.section`
     flex-direction: column;
   }
 `
+
+export const theme = {
+  bp: {
+    mobileS: `max-width: 330px`,
+    mobileM: `max-width: 400px`,
+    mobileL: `max-width: 480px`,
+    tabletS: `max-width: 600px`,
+    tabletL: `max-width: 768px`,
+    desktopXS: `max-width: 900px`,
+    desktopS: `max-width: 1080px`,
+    desktopM: `max-width: 1200px`,
+    desktopL: `max-width: 1400px`,
+  },
+};
+
