@@ -24,10 +24,6 @@ export const navLinks = [
     name: "Technologies",
     url: "/#technologies"
   },
-  {
-    name: "Contact",
-    url: "/#contact",
-  },
 ];
 
 export const contactinfo = {

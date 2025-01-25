@@ -23,8 +23,8 @@ export const GlobalStyling = createGlobalStyle`
   .BgAnimation__svg {
     position: absolute;
     top: 0;
-    width: auto;
-    height: auto;
+    width: 570px;
+    height: 665px;
     @media (min-width: 1024px) {
       padding-top: 6rem;
     }
@@ -79,6 +79,13 @@ export const StyledHeader = styled.header`
     position: relative;
     position: sticky;
   }
+`
+
+export const StyledHeaderContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%
 `
 
 export const theme = {
