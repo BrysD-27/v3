@@ -1,20 +1,25 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyling = createGlobalStyle`
+#root {
+  width: 100%; /* Full width */
+  padding: 24px 16px; /* Equivalent to py-6 px-4 */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
   #root {
-    max-width: 1280px;
-    min-height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    color: var(--color-zinc-300);
-
-    @media (min-width: 768px) {
-      padding-left: 3rem;
-      padding-right: 3rem;
-    }
+    padding: 48px 24px; /* Equivalent to sm:py-12 sm:px-6 */
   }
+}
 
-  @media (max-width: 1280px) {
+@media (min-width: 1024px) { /* lg breakpoint */
+  #root {
+    padding-left: 32px; /* Equivalent to lg:px-8 */
+    padding-right: 32px;
+  }
+}
+
+  @media (max-width: 1024px) {
     .BgAnimation__svg {
       display: none;
     }
@@ -39,14 +44,6 @@ export const GlobalStyling = createGlobalStyle`
   }
 `
 
-export const StyledContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  min-height: 100vh;
-  gap: 1rem;
-  width: 100%;
-`;
-
 export const Section = styled.section`
   display: ;
   flex-direction: ;
@@ -65,27 +62,9 @@ export const Section = styled.section`
 
   @media  {
     padding:  ;
-
     width: calc(100vw - 32px);
     flex-direction: column;
   }
-`
-
-export const StyledHeader = styled.header`
-  width: 48%;
-  @media (min-width: 1024px) {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    position: relative;
-    position: sticky;
-  }
-`
-
-export const StyledHeaderContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%
 `
 
 export const theme = {

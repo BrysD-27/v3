@@ -1,7 +1,24 @@
 "use client";
-import { StyledHeader, StyledHeaderContent } from "@/styles/globalcomponents";
 import BackgroundAnimation from "../background-animation";
 import Nav from "../nav";
+import styled from "styled-components";
+
+const StyledHeader = styled.header`
+  @media (min-width: 1024px) {
+    width: 48%;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    position: relative;
+    position: sticky;
+  }
+`
+
+const StyledHeaderContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%
+`
 
 const Header = () => {
     return (

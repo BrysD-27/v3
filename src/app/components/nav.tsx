@@ -28,7 +28,7 @@ const StyledLinks = styled.div`
         &:before {
           content: "0" counter(item) ".";
           margin-right: 5px;
-          color: var(--green);
+          color: var();
           font-size: var(--fz-xxs);
           text-align: right;
         }
@@ -42,7 +42,7 @@ const Nav = () => {
       <StyledLinks>
         <ol>
           {navLinks.map(({ url, name }, i) => (
-            <li key={i}>
+            <li className="text-zinc-200" key={i}>
               <Link href={url}>{name}</Link>
             </li>
           ))}
