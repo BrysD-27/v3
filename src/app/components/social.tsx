@@ -27,7 +27,8 @@ const StyledSocialList = styled.ul`
     a {
       display: block;
       color: rgb(113 113 122 / var(--tw-text-opacity, 1));
-      transition: color 0.15s ease-in-out;
+      transition: 0.15s ease-in-out;
+      transition-property: color, transform;
       padding: 0.5rem;
       border-radius: 6px;
 
@@ -36,6 +37,7 @@ const StyledSocialList = styled.ul`
         box-shadow: inset 0 1px 0 0 rgb(244 244 245 / 0.03);
         color: rgb(228 228 231 / var(--tw-text-opacity, 1));
         background-color: rgb(228 228 231 / 0.02);
+        transform: translateY(-5%); /* Moves up by 10px */
       }
 
       svg {

@@ -38,18 +38,25 @@ const StyledLinks = styled.div`
         font-weight: 700;
         font-size: 0.75rem;
         line-height: 1rem;
+        transition: background-color .15s ease-in-out;
 
         &:before {
           display: inline-flex;
           content: "";
-          background-color: rgb(113 113 122 / var(--tw-text-opacity, 1));
+          background: rgb(113 113 122 / 1);
+          // background: linear-gradient(
+          //   to right,
+          //   rgb(113 113 122 / .33),
+          //   rgb(113 113 122 / .66),
+          //   rgb(113 113 122 / 1)
+          // );
           width: 2rem;
-          height: 1px;
+          height: 2px;
           margin-right: 1rem;
-          color: var();
           font-size: var(--fz-xxs);
           text-align: right;
-          transition: width 0.15s ease-in-out;
+          transition: .15s ease-in-out;
+          transition-property: width, background;
         }
       }
     }
@@ -60,7 +67,13 @@ const StyledLinks = styled.div`
       color: rgb(228 228 231 / var(--tw-text-opacity, 1));
       &:before {
         width: 4rem;
-        background-color: rgb(228 228 231 / var(--tw-text-opacity, 1));
+        background: rgb(228 228 231 / 1);
+        // background: linear-gradient(
+        //     to right,
+        //     rgb(228 228 231 / .33),
+        //     rgb(228 228 231 / .66),
+        //     rgb(228 228 231 / 1)
+        //   );
       }
     }
   }
