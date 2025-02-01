@@ -2,6 +2,7 @@
 import BackgroundAnimation from "../background-animation";
 import Nav from "../nav";
 import styled from "styled-components";
+import Social from "../social";
 
 const StyledHeader = styled.header`
   @media (min-width: 1024px) {
@@ -42,23 +43,11 @@ const Header = () => {
             </p>
             <Nav />
           </div>
-          <ul className="flex">
-            <li>
-              <a>Github</a>
-            </li>
-            <li>
-              <a>Linkedin</a>
-            </li>
-            <li>
-              <a>Instagram</a>
-            </li>
-          </ul>
+          <Social />
         </StyledHeaderContent>
         <BackgroundAnimation />
       </StyledHeader>
-      <main>
-        Test
-      </main>
+      <main>Test</main>
     </>
   );
 };

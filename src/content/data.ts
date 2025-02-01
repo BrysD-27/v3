@@ -1,11 +1,12 @@
 export const metadata = {
-  title: 'Bryson Davis',
-  description: 'Bryson Davis is a software engineer who specializes in building digital applications.',
-  keywords: 'nextjs, react, bryson, software, engineer, fullstack, developer',
-  author: 'Bryson Davis',
-  url: 'https://www.brysondaviscode.com',
-  image: '',
-}
+  title: "Bryson Davis",
+  description:
+    "Bryson Davis is a software engineer who specializes in building digital applications.",
+  keywords: "nextjs, react, bryson, software, engineer, fullstack, developer",
+  author: "Bryson Davis",
+  url: "https://www.brysondaviscode.com",
+  image: "",
+};
 
 export const navLinks = [
   {
@@ -22,7 +23,7 @@ export const navLinks = [
   },
   {
     name: "Technologies",
-    url: "/#technologies"
+    url: "/#technologies",
   },
 ];
 
@@ -34,12 +35,12 @@ export const contactinfo = {
       url: "https://github.com/BrysD-27",
     },
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/brysondavis",
-    },
-    {
       name: "Linkedin",
       url: "https://www.linkedin.com/in/bryson-davis-427910191/",
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/brysondavis",
     },
   ],
 };

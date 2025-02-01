@@ -4,37 +4,44 @@ import Icon from "./icons/icon";
 
 const StyledSocialList = styled.ul`
   display: flex;
-  flex-direction: column;
   align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-top: 2rem;
+  margin-left: 0.25rem;
 
   &:after {
     content: "";
     display: block;
     width: 1px;
-    height: 90px;
     margin: 0 auto;
-    background-color: var(--light-slate);
+    background-color: var(--light-s);
   }
 
   li {
-    &:last-of-type {
-      margin-bottom: 20px;
-    }
-
+    margin-right: 1rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    flex-shrink: 0;
     a {
-      padding: 10px;
+      display: block;
+      color: rgb(113 113 122 / var(--tw-text-opacity, 1));
+      transition: color 0.15s ease-in-out;
+      padding: 0.5rem;
+      border-radius: 6px;
 
       &:hover,
       &:focus {
-        transform: translateY(-3px);
+        box-shadow: inset 0 1px 0 0 rgb(244 244 245 / 0.03);
+        color: rgb(228 228 231 / var(--tw-text-opacity, 1));
+        background-color: rgb(228 228 231 / 0.02);
       }
 
       svg {
-        width: 20px;
-        height: 20px;
+        width: 1.65rem;
+        height: 1.65rem;
+        vertical-align: middle;
       }
     }
   }
