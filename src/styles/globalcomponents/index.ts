@@ -3,7 +3,14 @@ import styled, { createGlobalStyle } from 'styled-components'
 export const GlobalStyling = createGlobalStyle`
 #root {
   width: 100%; /* Full width */
-  padding: 24px 16px; /* Equivalent to py-6 px-4 */
+  padding: 24px 16px; 
+  padding-top: 0 !important;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
 }
 
 @media (min-width: 640px) { /* sm breakpoint */
@@ -28,8 +35,8 @@ export const GlobalStyling = createGlobalStyle`
   .BgAnimation__svg {
     position: absolute;
     top: 0;
-    width: 570px;
-    height: 665px;
+    width: 450px;
+    height: 530px;
     @media (min-width: 1024px) {
       padding-top: 6rem;
     }

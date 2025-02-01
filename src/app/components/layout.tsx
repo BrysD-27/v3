@@ -9,6 +9,7 @@ export const StyledContainer = styled.div`
   max-width: 1280px; /* Equivalent to Tailwind's max-w-7xl */
   margin: 0 auto; /* Centers the container */
   flex-wrap: wrap;
+  text-wrap: wrap;
 
     @media (max-width: 1024px) { 
       flex-direction: column; 
