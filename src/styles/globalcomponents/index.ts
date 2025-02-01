@@ -1,19 +1,55 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyling = createGlobalStyle`
-    #root {
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 100%;
+#root {
+  width: 100%; /* Full width */
+  padding: 24px 16px; 
+  padding-top: 0 !important;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+  #root {
+    padding: 48px 24px; /* Equivalent to sm:py-12 sm:px-6 */
+  }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  #root {
+    padding-left: 32px; /* Equivalent to lg:px-8 */
+    padding-right: 32px;
+  }
+}
+
+  @media (max-width: 1024px) {
+    .BgAnimation__svg {
+      display: none;
+    }
+  }
+
+  .BgAnimation__svg {
+    position: absolute;
+    top: 0;
+    width: 450px;
+    height: 530px;
+    @media (min-width: 1024px) {
+      padding-top: 6rem;
+    }
+  }
+  
+  main {
+    @media (min-width: 1024px) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      position: sticky;
+    }
   }
 `
-
-export const StyledContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`;
 
 export const Section = styled.section`
   display: ;
@@ -33,7 +69,6 @@ export const Section = styled.section`
 
   @media  {
     padding:  ;
-
     width: calc(100vw - 32px);
     flex-direction: column;
   }
