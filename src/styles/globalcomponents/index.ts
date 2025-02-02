@@ -4,25 +4,25 @@ export const GlobalStyling = createGlobalStyle`
 #root {
   width: 100%; /* Full width */
   padding: 24px 16px; 
-  padding-top: 0 !important;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: 768px) {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 
   @media (min-width: 1280px) {
     max-width: 1280px;
   }
-}
 
-@media (min-width: 640px) { /* sm breakpoint */
-  #root {
-    padding: 48px 24px; /* Equivalent to sm:py-12 sm:px-6 */
-  }
-}
-
-@media (min-width: 1024px) { /* lg breakpoint */
-  #root {
-    padding-left: 32px; /* Equivalent to lg:px-8 */
-    padding-right: 32px;
+  @media (min-width: 1024px) {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 32px;
+      padding-right: 32px;
   }
 }
 
@@ -43,10 +43,11 @@ export const GlobalStyling = createGlobalStyle`
   }
   
   main {
+    padding-bottom: 6rem;
     @media (min-width: 1024px) {
       padding-top: 6rem;
-      padding-bottom: 6rem;
       position: sticky;
+      width:  52%;
     }
   }
 `
