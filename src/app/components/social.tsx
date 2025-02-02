@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { contactinfo } from "@/content/data";
+import { contactinfo } from "@/public/content/data";
 import Icon from "./icons/icon";
 
 const StyledSocialList = styled.ul`
@@ -36,7 +36,7 @@ const StyledSocialList = styled.ul`
       &:focus {
         box-shadow: inset 0 1px 0 0 rgb(244 244 245 / 0.03);
         color: rgb(228 228 231 / var(--tw-text-opacity, 1));
-        background-color: rgb(228 228 231 / 0.02);
+        background-color: #27272a80;
         transform: translateY(-5%); /* Moves up by 10px */
       }
 

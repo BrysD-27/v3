@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { navLinks } from "@/content/data";
+import { navLinks } from "@/public/content/data";
 import Link from "next/link";
 
 const StyledNav = styled.nav`
@@ -8,7 +8,7 @@ const StyledNav = styled.nav`
   @media (min-width: 1024px) {
     display: block;
   }
-`
+`;
 const StyledLinks = styled.div`
   display: flex;
   align-items: center;
@@ -68,7 +68,7 @@ const StyledLinks = styled.div`
     }
 
     a:hover {
-      background-color: rgb(228 228 231 / 0.02);
+      background-color: #27272a80;
       box-shadow: inset 0 1px 0 0 rgb(244 244 245 / 0.03);
       color: rgb(228 228 231 / var(--tw-text-opacity, 1));
       &:before {
