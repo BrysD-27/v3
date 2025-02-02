@@ -3,6 +3,12 @@ import styled from "styled-components";
 import { navLinks } from "@/content/data";
 import Link from "next/link";
 
+const StyledNav = styled.nav`
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+  }
+`
 const StyledLinks = styled.div`
   display: flex;
   align-items: center;
@@ -38,7 +44,7 @@ const StyledLinks = styled.div`
         font-weight: 700;
         font-size: 0.75rem;
         line-height: 1rem;
-        transition: background-color .15s ease-in-out;
+        transition: background-color 0.15s ease-in-out;
 
         &:before {
           display: inline-flex;
@@ -55,7 +61,7 @@ const StyledLinks = styled.div`
           margin-right: 1rem;
           font-size: var(--fz-xxs);
           text-align: right;
-          transition: .15s ease-in-out;
+          transition: 0.15s ease-in-out;
           transition-property: width, background;
         }
       }
@@ -80,7 +86,7 @@ const StyledLinks = styled.div`
 `;
 const Nav = () => {
   return (
-    <nav>
+    <StyledNav>
       <StyledLinks>
         <ol>
           {navLinks.map(({ url, name }, i) => (
@@ -90,7 +96,7 @@ const Nav = () => {
           ))}
         </ol>
       </StyledLinks>
-    </nav>
+    </StyledNav>
   );
 };
 
