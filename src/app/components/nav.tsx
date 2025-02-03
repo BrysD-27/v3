@@ -67,7 +67,7 @@ const StyledLinks = styled.div`
       }
     }
 
-    a:hover {
+    a:hover, a:focus {
       background-color: #27272a80;
       box-shadow: inset 0 1px 0 0 rgb(244 244 245 / 0.03);
       color: rgb(228 228 231 / var(--tw-text-opacity, 1));

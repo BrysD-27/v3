@@ -63,13 +63,10 @@ const StyledParagraph = styled.p`
 
 const About = () => {
   return (
-    <main>
       <StyledSection id="about" aria-label="About me">
-        <div>
-          <StyledHeading>
-            <h2>About</h2>
-          </StyledHeading>
-        </div>
+        <StyledHeading>
+          <h2>About</h2>
+        </StyledHeading>
         <div>
           <StyledParagraph>
             {"I'm"} a developer passionate about building well-engineered,
@@ -96,7 +93,6 @@ const About = () => {
           </StyledParagraph>
         </div>
       </StyledSection>
-    </main>
   );
 };
 
