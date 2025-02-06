@@ -47,6 +47,20 @@ const StyledGroupList = styled.div`
       @media (min-width: 640px) {
         grid-column: span 2 / span 2;
       }
+      display: flex;
+      align-items: start;
+      div:last-child {
+        display: flex;
+        align-items: center;
+      }
+
+      div:last-child::before {
+        content: "";
+        width: .75rem;
+        height: 1px;
+        margin: 0 .375rem 0 .375rem;
+        background-color: rgb(113 113 122 / 1);
+      }
     }
   }
 `;
@@ -130,7 +144,10 @@ const Experience = () => {
               <li className="mb-12" key={i}>
                 <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                   <StyledOverlayDiv></StyledOverlayDiv>
-                  <header>{range}</header>
+                  <header>
+                    {range.split("-").map((value, i) => (
+                      <div key={i}>{value}</div>
+                  ))}</header>
                   <StyledContentDiv>
                     <StyledHeading3>
                       <div>
