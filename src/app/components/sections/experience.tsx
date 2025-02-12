@@ -44,6 +44,7 @@ const StyledGroupList = styled.div`
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.06rem;
+      color: rgb(161 161 170 / var(--tw-text-opacity, 1));
       @media (min-width: 640px) {
         grid-column: span 2 / span 2;
       }
@@ -76,6 +77,7 @@ const StyledContainerDiv = styled.div`
   @media (width >= 640px) {
     gap: 2rem;
   }
+    transition: color 0.15s ease-in-out;
 
     &:hover {
       @media (min-width: 1024px) {
@@ -92,6 +94,7 @@ const StyledContainerDiv = styled.div`
 
     &:hover ${() => StyledTitleAnchor} {
     @media (min-width: 1024px) {
+      transition: color 0.15s ease-in-out;
       color: rgb(56 189 248 / var(--tw-text-opacity, 1));
     }
   }
@@ -105,6 +108,8 @@ const StyledOverlayDiv = styled.div`
   z-index: 0;
   border-radius: 0.375rem;
   @media (min-width: 1024px) {
+    transition-property: background-color, box-shadow;
+    transition: 0.15s ease-in-out;
     left: -1.5rem;
     right: -1.5rem;
     display: block;
@@ -170,8 +175,6 @@ const StyledTitleAnchor = styled.a`
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25;
-  span:first-child::before {
-}
 `;
 
 const Experience = () => {
