@@ -23,12 +23,16 @@ const StyledLinks = styled.div`
     margin: 0;
     list-style: none;
     width: 40%;
+    &:hover li > a:not(:hover) {
+    transition: opacity 0.15s ease-in-out;
+      opacity: 0.7;
+    }
     li {
       display: block;
       position: relative;
       counter-increment: item 1;
       font-size: var(--fz-xs);
-      margin: 0.5rem;
+      margin: 0;
       margin-left: 0;
 
       a {
@@ -37,7 +41,7 @@ const StyledLinks = styled.div`
         display: flex;
         align-items: center;
         margin-top: 2px;
-        padding: 0.7rem 0.7rem 0.7rem 0;
+        padding: .9rem .9rem .9rem 0;
         width: 100%;
         letter-spacing: 0.1em;
         text-transform: uppercase;
