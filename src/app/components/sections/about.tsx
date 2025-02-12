@@ -39,7 +39,7 @@ const StyledAnchor = styled.a`
 
   &:hover,
   &:focus {
-    color: rgb(249 115 22 / var(--tw-text-opacity, 1));
+    color: rgb(56 189 248 / var(--tw-text-opacity, 1));
   }
 `;
 
@@ -51,7 +51,7 @@ const StyledFancySpan = styled.span`
   &:hover,
   &:focus {
     cursor: url(/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdiamond.b8577623.ico&w=64&q=75), auto;
-    color: rgb(56 189 248 / var(--tw-text-opacity, 1));
+    color: rgb(94 234 212 / var(--tw-text-opacity, 1));
   }
 }
 `;

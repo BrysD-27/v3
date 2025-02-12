@@ -56,13 +56,46 @@ const StyledGroupList = styled.div`
 
       div:last-child::before {
         content: "";
-        width: .75rem;
+        width: 0.75rem;
         height: 1px;
-        margin: 0 .375rem 0 .375rem;
+        margin: 0 0.375rem 0 0.375rem;
         background-color: rgb(113 113 122 / 1);
       }
     }
   }
+`;
+
+const StyledContainerDiv = styled.div`
+  display: grid;
+  position: relative;
+  padding-bottom: .25rem;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  @media (width >= 768px) {
+    gap: 1rem;
+  }
+  @media (width >= 640px) {
+    gap: 2rem;
+  }
+
+    &:hover {
+      @media (min-width: 1024px) {
+        color: rgb(228 228 231 / var(--tw-text-opacity, 1));
+    }
+  }
+
+  &:hover ${() => StyledOverlayDiv} {
+    @media (min-width: 1024px) {
+        box-shadow: inset 0 1px 0 0 rgb(244 244 245 / 0.03);
+        background-color: #27272a80;
+    }
+  }
+
+    &:hover ${() => StyledTitleAnchor} {
+    @media (min-width: 1024px) {
+      color: rgb(56 189 248 / var(--tw-text-opacity, 1));
+    }
+  }
+}
 `;
 
 const StyledOverlayDiv = styled.div`
@@ -83,7 +116,7 @@ const StyledContentDiv = styled.div`
   grid-column: span 6 / span 6;
 
   p {
-    letter-spacing: .04rem;
+    letter-spacing: 0.04rem;
   }
 `;
 
@@ -115,7 +148,7 @@ const StyledUnorderedList = styled.ul`
     line-height: 1.25rem;
     background-color: rgb(56 189 248 / .1);
   }
-  `;
+`;
 
 const StyledOverlaySpan = styled.span`
   position: absolute;
@@ -131,6 +164,16 @@ const StyledOverlaySpan = styled.span`
   }
 `;
 
+const StyledTitleAnchor = styled.a`
+  display: inline-flex;
+  align-items: baseline;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+  span:first-child::before {
+}
+`;
+
 const Experience = () => {
   return (
     <StyledSection id="about" aria-label="About me">
@@ -142,38 +185,50 @@ const Experience = () => {
           {experienceInfo.map(
             ({ company, title, range, description, technologies }, i) => (
               <li className="mb-12" key={i}>
-                <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                <StyledContainerDiv>
                   <StyledOverlayDiv></StyledOverlayDiv>
                   <header>
                     {range.split("-").map((value, i) => (
                       <div key={i}>{value}</div>
-                  ))}</header>
+                    ))}
+                  </header>
                   <StyledContentDiv>
                     <StyledHeading3>
                       <div>
-                        <a>
+                        <StyledTitleAnchor>
                           <StyledOverlaySpan></StyledOverlaySpan>
                           <span>
-                            {title}
+                            {title + " • "}
                             <span className="inline-block">
                               {company}
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                                aria-hidden="true"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
                             </span>
                           </span>
-                        </a>
+                        </StyledTitleAnchor>
                       </div>
                     </StyledHeading3>
-                    <p className="mt-2 text-sm leading-normal">
-                      {description}
-                    </p>
+                    <p className="mt-2 text-sm leading-normal">{description}</p>
                     <StyledUnorderedList>
-                      {technologies.map(( value, i) => (
+                      {technologies.map((value, i) => (
                         <li className="mr-1.5 mt-2" key={i}>
                           <div className="text-sky-300">{value}</div>
                         </li>
                       ))}
                     </StyledUnorderedList>
                   </StyledContentDiv>
-                </div>
+                </StyledContainerDiv>
               </li>
             )
           )}
