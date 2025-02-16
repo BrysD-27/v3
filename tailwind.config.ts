@@ -29,6 +29,7 @@ export default {
         serif: ['Merriweather', 'serif'],
         grotesk: ['Space Grotesk', 'sans-serif'],
       },
+      scrollBehavior: ["smooth"]
     },
   },
   plugins: [],

@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { navLinks } from "@/public/content/data";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const StyledNav = styled.nav`
   display: none;
@@ -65,7 +66,7 @@ const StyledLinks = styled.div`
       }
     }
 
-    a:hover, a:focus {
+    a:hover, a.active {
       background-color: #27272a80;
       box-shadow: inset 0 1px 0 0 rgb(244 244 245 / 0.03);
       color: rgb(228 228 231 / var(--tw-text-opacity, 1));
@@ -77,13 +78,44 @@ const StyledLinks = styled.div`
   }
 `;
 const Nav = () => {
+  const [activeSection, setActiveSection] = useState("about");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let mostVisible = entries.find(entry => entry.isIntersecting);
+      
+        // Always prefer the first section if multiple are visible
+        if (mostVisible?.target.id === navLinks[1].name && entries[0].isIntersecting) {
+          mostVisible = entries[0]; // Keep first section active
+        }
+  
+        if (mostVisible) {
+          setActiveSection(mostVisible.target.id);
+        }
+      },
+      { 
+        threshold: 0.6,
+        rootMargin: "-10% 0px -33% 0px"
+      }
+    );
+
+    navLinks.forEach(({name}) => {
+      console.log(name.toLocaleLowerCase())
+      const section = document.getElementById(name.toLowerCase());
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <StyledNav>
       <StyledLinks>
         <ol>
           {navLinks.map(({ url, name }, i) => (
             <li key={i}>
-              <Link href={url}>{name}</Link>
+              <Link href={url} className={`${name.toLowerCase() === activeSection ? "active" : ""}`}>{name}</Link>
             </li>
           ))}
         </ol>

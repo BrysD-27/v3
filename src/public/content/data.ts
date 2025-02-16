@@ -11,19 +11,19 @@ export const metadata = {
 export const navLinks = [
   {
     name: "About",
-    url: "/#about",
+    url: "#about",
   },
   {
     name: "Experience",
-    url: "/#experience",
+    url: "#experience",
   },
   {
     name: "Projects",
-    url: "/#projects",
+    url: "#projects",
   },
   {
     name: "Technologies",
-    url: "/#technologies",
+    url: "#technologies",
   },
 ];
 

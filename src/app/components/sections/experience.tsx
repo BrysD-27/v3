@@ -170,7 +170,9 @@ const StyledOverlaySpan = styled.span`
     right: -1.5rem;
     top: -1rem;
     bottom: -1rem;
-    display: none;
+  }
+  @media (max-width: 1024px) {
+      display: none;
   }
 `;
 
@@ -196,7 +198,7 @@ const StyledTitleAnchor = styled.a`
 
 const Experience = () => {
   return (
-    <StyledSection id="about" aria-label="About me">
+    <StyledSection id="experience" aria-label="Work experience">
       <StyledHeading>
         <h2>Experience</h2>
       </StyledHeading>
@@ -255,7 +257,7 @@ const Experience = () => {
         </ol>
       </StyledGroupList>
       <div className="mt-12">
-        <StyledTitleAnchor>
+        <StyledTitleAnchor className="cursor-pointer">
           <span>
             View Full Résumé
             <span className="inline-block">

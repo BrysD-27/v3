@@ -87,6 +87,12 @@ const About = () => {
           modern UI/UX standards to deliver an inclusive user experience.
         </StyledParagraph>
         <StyledParagraph>
+          Additionally, I am pursuing a Computer Science education at university
+          to deepen my understanding of algorithms, data structures, and
+          mathematical reasoning, applying these principles to build efficient
+          and maintainable software.
+        </StyledParagraph>
+        <StyledParagraph>
           Beyond coding, {"I’m"} usually weightlifting, working on cars,
           spending time with my girlfriend and two cats, or exploring Minecraft
           for <StyledFancySpan>Diamonds</StyledFancySpan>.
