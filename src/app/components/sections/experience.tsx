@@ -92,10 +92,14 @@ const StyledContainerDiv = styled.div`
     }
   }
 
-    &:hover ${() => StyledTitleAnchor} {
+  &:hover ${() => StyledTitleAnchor} {
     @media (min-width: 1024px) {
       transition: color 0.15s ease-in-out;
       color: rgb(56 189 248 / var(--tw-text-opacity, 1));
+      svg {
+        transition: transform 0.15s ease-in-out;
+        transform: translateY(-15%) translateX(15%);
+      }
     }
   }
 }
@@ -151,7 +155,7 @@ const StyledUnorderedList = styled.ul`
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.25rem;
-    background-color: rgb(56 189 248 / .1);
+    background-color: rgb(56 189 248 / 0.1);
   }
 `;
 
@@ -164,8 +168,9 @@ const StyledOverlaySpan = styled.span`
   @media (min-width: 768px) {
     left: -1.5rem;
     right: -1.5rem;
-    top: 1rem;
-    bottom: 1rem;
+    top: -1rem;
+    bottom: -1rem;
+    display: none;
   }
 `;
 
@@ -175,6 +180,18 @@ const StyledTitleAnchor = styled.a`
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25;
+
+  @media (min-width: 768px) {
+    &:hover {
+      transition: color 0.15s ease-in-out;
+      color: rgb(56 189 248 / var(--tw-text-opacity, 1));
+        svg {
+          transition: transform 0.15s ease-in-out;
+          transform: translateY(-15%) translateX(15%);
+        }
+      }
+    }
+  }
 `;
 
 const Experience = () => {
@@ -186,7 +203,7 @@ const Experience = () => {
       <StyledGroupList>
         <ol>
           {experienceInfo.map(
-            ({ company, title, range, description, technologies }, i) => (
+            ({ company, title, range, link, description, technologies }, i) => (
               <li className="mb-12" key={i}>
                 <StyledContainerDiv>
                   <StyledOverlayDiv></StyledOverlayDiv>
@@ -198,7 +215,7 @@ const Experience = () => {
                   <StyledContentDiv>
                     <StyledHeading3>
                       <div>
-                        <StyledTitleAnchor>
+                        <StyledTitleAnchor href={link} target="_blank">
                           <StyledOverlaySpan></StyledOverlaySpan>
                           <span>
                             {title + " • "}
@@ -214,7 +231,7 @@ const Experience = () => {
                                 <path
                                   fillRule="evenodd"
                                   d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                                  clip-rule="evenodd"
+                                  clipRule="evenodd"
                                 ></path>
                               </svg>
                             </span>
@@ -237,6 +254,28 @@ const Experience = () => {
           )}
         </ol>
       </StyledGroupList>
+      <div className="mt-12">
+        <StyledTitleAnchor>
+          <span>
+            View Full Résumé
+            <span className="inline-block">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </span>
+          </span>
+        </StyledTitleAnchor>
+      </div>
     </StyledSection>
   );
 };

@@ -50,6 +50,7 @@ export const experienceInfo = [
     company: "Hobby Lobby",
     title: "Software Team Lead",
     range: "2021 - Present",
+    link: "https://www.hobbylobby.com/",
     description:
       "Lead the development and maintenance of full-stack applications to improve store efficiency and productivity. Focus on accessibility, scalability, and modern UI/UX standards to deliver high-performing, inclusive user experiences. Collaborate with cross-functional teams to optimize system performance and implement best engineering practices.",
     technologies: [

@@ -54,12 +54,6 @@ const StyledLinks = styled.div`
           display: inline-flex;
           content: "";
           background: rgb(113 113 122 / 1);
-          // background: linear-gradient(
-          //   to right,
-          //   rgb(113 113 122 / .33),
-          //   rgb(113 113 122 / .66),
-          //   rgb(113 113 122 / 1)
-          // );
           width: 2rem;
           height: 2px;
           margin-right: 1rem;
@@ -78,12 +72,6 @@ const StyledLinks = styled.div`
       &:before {
         width: 4rem;
         background: rgb(228 228 231 / 1);
-        // background: linear-gradient(
-        //     to right,
-        //     rgb(228 228 231 / .33),
-        //     rgb(228 228 231 / .66),
-        //     rgb(228 228 231 / 1)
-        //   );
       }
     }
   }
