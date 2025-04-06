@@ -2,6 +2,8 @@ import Layout from "./components/layout";
 import About from "./components/sections/about";
 import Experience from "./components/sections/experience";
 import Header from "./components/sections/header";
+import Projects from "./components/sections/projects";
+
 export default function Index() {
   return (
     <Layout>
@@ -9,6 +11,7 @@ export default function Index() {
       <main>
         <About/>
         <Experience/>
+        <Projects />
       </main>
     </Layout>
 );

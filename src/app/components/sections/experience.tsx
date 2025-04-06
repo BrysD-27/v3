@@ -1,37 +1,7 @@
 "use client";
 import { experienceInfo } from "@/public/content/data";
+import { StyledHeading, StyledSection } from "@/styles/globalcomponents";
 import styled from "styled-components";
-
-const StyledSection = styled.section`
-  @media (min-width: 1024px) {
-    scroll-margin-top: 6rem;
-    margin-bottom: 9rem;
-  }
-  @media (min-width: 768px) {
-    margin-bottom: 6rem;
-  }
-`;
-
-const StyledHeading = styled.div`
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  z-index: 20;
-  @media (min-width: 1024px) {
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-  h2 {
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-`;
 
 const StyledGroupList = styled.div`
   div {
