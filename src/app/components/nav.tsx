@@ -24,10 +24,6 @@ const StyledLinks = styled.div`
     margin: 0;
     list-style: none;
     width: 40%;
-    &:hover li > a:not(:hover) {
-    transition: opacity 0.15s ease-in-out;
-      opacity: 0.7;
-    }
     li {
       display: block;
       position: relative;
@@ -94,10 +90,7 @@ const Nav = () => {
           setActiveSection(mostVisible.target.id);
         }
       },
-      { 
-        threshold: 0.6,
-        rootMargin: "-10% 0px -33% 0px"
-      }
+      { threshold: 0.6 }
     );
 
     navLinks.forEach(({name}) => {
