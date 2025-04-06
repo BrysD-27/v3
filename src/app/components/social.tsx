@@ -9,7 +9,6 @@ const StyledSocialList = styled.ul`
   padding: 0;
   list-style: none;
   margin-top: 2rem;
-  margin-left: 0.25rem;
 
   &:after {
     content: "";

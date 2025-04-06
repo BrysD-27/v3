@@ -44,8 +44,8 @@ export const GlobalStyling = createGlobalStyle`
   
   main {
     padding-bottom: 6rem;
+    padding-top: 6rem;
     @media (min-width: 1024px) {
-      padding-top: 6rem;
       position: sticky;
       width:  52%;
     }

@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { navLinks } from "@/public/content/data";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const StyledNav = styled.nav`
   display: none;
@@ -28,7 +29,7 @@ const StyledLinks = styled.div`
       position: relative;
       counter-increment: item 1;
       font-size: var(--fz-xs);
-      margin: 0.5rem;
+      margin: 0;
       margin-left: 0;
 
       a {
@@ -37,7 +38,7 @@ const StyledLinks = styled.div`
         display: flex;
         align-items: center;
         margin-top: 2px;
-        padding: 0.7rem 0.7rem 0.7rem 0;
+        padding: .9rem .9rem .9rem 0;
         width: 100%;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -50,12 +51,6 @@ const StyledLinks = styled.div`
           display: inline-flex;
           content: "";
           background: rgb(113 113 122 / 1);
-          // background: linear-gradient(
-          //   to right,
-          //   rgb(113 113 122 / .33),
-          //   rgb(113 113 122 / .66),
-          //   rgb(113 113 122 / 1)
-          // );
           width: 2rem;
           height: 2px;
           margin-right: 1rem;
@@ -67,31 +62,53 @@ const StyledLinks = styled.div`
       }
     }
 
-    a:hover {
+    a:hover, a.active {
       background-color: #27272a80;
       box-shadow: inset 0 1px 0 0 rgb(244 244 245 / 0.03);
       color: rgb(228 228 231 / var(--tw-text-opacity, 1));
       &:before {
         width: 4rem;
         background: rgb(228 228 231 / 1);
-        // background: linear-gradient(
-        //     to right,
-        //     rgb(228 228 231 / .33),
-        //     rgb(228 228 231 / .66),
-        //     rgb(228 228 231 / 1)
-        //   );
       }
     }
   }
 `;
 const Nav = () => {
+  const [activeSection, setActiveSection] = useState("about");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let mostVisible = entries.find(entry => entry.isIntersecting);
+      
+        // Always prefer the first section if multiple are visible
+        if (mostVisible?.target.id === navLinks[1].name && entries[0].isIntersecting) {
+          mostVisible = entries[0]; // Keep first section active
+        }
+  
+        if (mostVisible) {
+          setActiveSection(mostVisible.target.id);
+        }
+      },
+      { threshold: 0.6 }
+    );
+
+    navLinks.forEach(({name}) => {
+      console.log(name.toLocaleLowerCase())
+      const section = document.getElementById(name.toLowerCase());
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <StyledNav>
       <StyledLinks>
         <ol>
           {navLinks.map(({ url, name }, i) => (
             <li key={i}>
-              <Link href={url}>{name}</Link>
+              <Link href={url} className={`${name.toLowerCase() === activeSection ? "active" : ""}`}>{name}</Link>
             </li>
           ))}
         </ol>

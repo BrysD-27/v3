@@ -39,7 +39,7 @@ const StyledAnchor = styled.a`
 
   &:hover,
   &:focus {
-    color: rgb(249 115 22 / var(--tw-text-opacity, 1));
+    color: rgb(56 189 248 / var(--tw-text-opacity, 1));
   }
 `;
 
@@ -51,7 +51,7 @@ const StyledFancySpan = styled.span`
   &:hover,
   &:focus {
     cursor: url(/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdiamond.b8577623.ico&w=64&q=75), auto;
-    color: rgb(56 189 248 / var(--tw-text-opacity, 1));
+    color: rgb(94 234 212 / var(--tw-text-opacity, 1));
   }
 }
 `;
@@ -63,40 +63,42 @@ const StyledParagraph = styled.p`
 
 const About = () => {
   return (
-    <main>
-      <StyledSection id="about" aria-label="About me">
-        <div>
-          <StyledHeading>
-            <h2>About</h2>
-          </StyledHeading>
-        </div>
-        <div>
-          <StyledParagraph>
-            {"I'm"} a developer passionate about building well-engineered,
-            intuitive user experiences. I enjoy working at the intersection of
-            design and development, crafting interfaces that are not only
-            visually appealing but also performant and user-friendly. Clean
-            code, efficiency, and accessibility are core to my approach.
-          </StyledParagraph>
-          <StyledParagraph>
-            Currently, {"I'm"} a Software Team Lead at{" "}
-            <StyledAnchor href="https://www.hobbylobby.com/" target="_blank">
-              Hobby Lobby
-            </StyledAnchor>
-            , specializing in accessibility and scalability. I contribute to the
-            creation and maintenance of full-stack applications that enhance the
-            efficiency and productivity of Hobby {"Lobby's"} stores, ensuring
-            our suite of applications is intuitive, high-performing, and aligned
-            with modern UI/UX standards to deliver an inclusive user experience.
-          </StyledParagraph>
-          <StyledParagraph>
-            Beyond coding, {"I’m"} usually weightlifting, learning random
-            subjects, spending time with my girlfriend and two cats, or
-            exploring Minecraft for <StyledFancySpan>Diamonds</StyledFancySpan>.
-          </StyledParagraph>
-        </div>
-      </StyledSection>
-    </main>
+    <StyledSection id="about" aria-label="About me">
+      <StyledHeading>
+        <h2>About</h2>
+      </StyledHeading>
+      <div>
+        <StyledParagraph>
+          {"I'm"} a developer passionate about building well-engineered,
+          intuitive user experiences. I enjoy working at the intersection of
+          design and development, crafting interfaces that are not only visually
+          appealing but also performant and user-friendly. Clean code,
+          efficiency, and accessibility are core to my approach.
+        </StyledParagraph>
+        <StyledParagraph>
+          Currently, {"I'm"} a Software Team Lead at{" "}
+          <StyledAnchor href="https://www.hobbylobby.com/" target="_blank">
+            Hobby Lobby
+          </StyledAnchor>
+          , specializing in accessibility and scalability. I contribute to the
+          creation and maintenance of full-stack applications that enhance the
+          efficiency and productivity of Hobby {"Lobby's"} stores, ensuring our
+          suite of applications is intuitive, high-performing, and aligned with
+          modern UI/UX standards to deliver an inclusive user experience.
+        </StyledParagraph>
+        <StyledParagraph>
+          Additionally, I am pursuing a Computer Science education at university
+          to deepen my understanding of algorithms, data structures, and
+          mathematical reasoning, applying these principles to build efficient
+          and maintainable software.
+        </StyledParagraph>
+        <StyledParagraph>
+          Beyond coding, {"I’m"} usually weightlifting, working on cars,
+          spending time with my girlfriend and two cats, or exploring Minecraft
+          for <StyledFancySpan>Diamonds</StyledFancySpan>.
+        </StyledParagraph>
+      </div>
+    </StyledSection>
   );
 };
 

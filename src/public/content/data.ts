@@ -11,19 +11,19 @@ export const metadata = {
 export const navLinks = [
   {
     name: "About",
-    url: "/#about",
+    url: "#about",
   },
   {
     name: "Experience",
-    url: "/#experience",
+    url: "#experience",
   },
   {
     name: "Projects",
-    url: "/#projects",
+    url: "#projects",
   },
   {
     name: "Technologies",
-    url: "/#technologies",
+    url: "#technologies",
   },
 ];
 
@@ -44,3 +44,22 @@ export const contactinfo = {
     },
   ],
 };
+
+export const experienceInfo = [
+  {
+    company: "Hobby Lobby",
+    title: "Software Team Lead",
+    range: "2021 - Present",
+    link: "https://www.hobbylobby.com/",
+    description:
+      "Lead the development and maintenance of full-stack applications to improve store efficiency and productivity. Focus on accessibility, scalability, and modern UI/UX standards to deliver high-performing, inclusive user experiences. Collaborate with cross-functional teams to optimize system performance and implement best engineering practices.",
+    technologies: [
+      "T-SQL",
+      ".NET Core",
+      "Typescript",
+      "Javascript",
+      "Angular",
+      "HTML & Bootstrap"
+    ]
+  },
+];
