@@ -81,9 +81,8 @@ const Nav = () => {
       (entries) => {
         let mostVisible = entries.find(entry => entry.isIntersecting);
       
-        // Always prefer the first section if multiple are visible
         if (mostVisible?.target.id === navLinks[1].name && entries[0].isIntersecting) {
-          mostVisible = entries[0]; // Keep first section active
+          mostVisible = entries[0];
         }
   
         if (mostVisible) {

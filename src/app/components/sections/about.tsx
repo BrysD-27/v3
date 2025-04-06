@@ -1,4 +1,5 @@
 "use client";
+import { StyledParagraph } from "@/styles/globalcomponents";
 import styled from "styled-components";
 
 const StyledSection = styled.section`
@@ -54,11 +55,6 @@ const StyledFancySpan = styled.span`
     color: rgb(94 234 212 / var(--tw-text-opacity, 1));
   }
 }
-`;
-
-const StyledParagraph = styled.p`
-  margin-bottom: 1rem;
-  line-height: 1.625;
 `;
 
 const About = () => {

@@ -75,6 +75,41 @@ export const Section = styled.section`
   }
 `
 
+export const StyledSection = styled.section`
+  @media (min-width: 1024px) {
+    scroll-margin-top: 6rem;
+    margin-bottom: 9rem;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 6rem;
+  }
+`;
+
+export const StyledHeading = styled.div`
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  @media (min-width: 1024px) {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  h2 {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+`;
+
+export const StyledParagraph = styled.p`
+  margin-bottom: 1rem;
+  line-height: 1.625;
+`;
+
 export const theme = {
   bp: {
     mobileS: `max-width: 330px`,
