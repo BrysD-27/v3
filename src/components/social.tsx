@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { contactinfo } from "@/public/content/data";
-import Icon from "./icons/icon";
+import Icon, { IconName } from "./icons/icon";
 
 const StyledSocialList = styled.ul`
   display: flex;
@@ -54,7 +54,7 @@ const Social = () => (
       contactinfo.socialMedia.map(({ url, name }, i) => (
         <li key={i}>
           <a href={url} aria-label={name} target="_blank" rel="noreferrer">
-            <Icon name={name} />
+            <Icon name={name as IconName} />
           </a>
         </li>
       ))}

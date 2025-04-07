@@ -227,7 +227,7 @@ const Experience = () => {
         </ol>
       </StyledGroupList>
       <div className="mt-12">
-        <StyledTitleAnchor className="cursor-pointer">
+        <StyledTitleAnchor className="cursor-pointer" href="/resume.pdf" target="_blank" rel="noopener norefferer">
           <span>
             View Full Résumé
             <span className="inline-block">

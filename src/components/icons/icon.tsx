@@ -7,7 +7,12 @@ import {
   IconExternal,
 } from "@/components/icons";
 
-const Icon = ({ name }) => {
+export type IconName = 'GitHub' | 'Instagram' | 'Linkedin'; // Add whatever icons you support
+interface IconProps {
+  name: IconName;
+}
+
+const Icon = ({ name }: IconProps) => {
   switch (name) {
     case "GitHub":
       return <IconGitHub />;

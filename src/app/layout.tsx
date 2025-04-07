@@ -1,4 +1,3 @@
-import "./globals.css";
 import { metadata } from "@/public/content/data";
 import Head from "next/head";
 
