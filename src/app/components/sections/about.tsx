@@ -59,8 +59,8 @@ const StyledFancySpan = styled.span`
 
 const About = () => {
   return (
-    <StyledSection id="about" aria-label="About me">
-      <StyledHeading>
+    <StyledSection>
+      <StyledHeading id="about" aria-label="About me">
         <h2>About</h2>
       </StyledHeading>
       <div>

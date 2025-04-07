@@ -40,12 +40,12 @@ const StyledContainerDiv = styled.div`
   display: grid;
   position: relative;
   padding-bottom: .25rem;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
   @media (width >= 768px) {
     gap: 1rem;
-  }
-  @media (width >= 640px) {
-    gap: 2rem;
+    }
+    @media (width >= 640px) {
+      gap: 2rem;
+      grid-template-columns: repeat(8, minmax(0, 1fr));
   }
     transition: color 0.15s ease-in-out;
 
@@ -168,8 +168,8 @@ const StyledTitleAnchor = styled.a`
 
 const Experience = () => {
   return (
-    <StyledSection id="experience" aria-label="Work experience">
-      <StyledHeading>
+    <StyledSection>
+      <StyledHeading id="experience" aria-label="Work experience">
         <h2>Experience</h2>
       </StyledHeading>
       <StyledGroupList>

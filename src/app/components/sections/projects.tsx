@@ -1,15 +1,17 @@
 "use client";
-import { StyledHeading, StyledParagraph, StyledSection } from "@/styles/globalcomponents";
+import {
+  StyledHeading,
+  StyledParagraph,
+  StyledSection,
+} from "@/styles/globalcomponents";
 
 const Projects = () => {
   return (
-    <StyledSection id="projects" aria-label="Projects">
-      <StyledHeading>
+    <StyledSection>
+      <StyledHeading id="projects" aria-label="Projects">
         <h2>Projects</h2>
       </StyledHeading>
-              <StyledParagraph>
-                Projects coming soon...
-              </StyledParagraph>
+      <StyledParagraph>Projects coming soon...</StyledParagraph>
     </StyledSection>
   );
 };

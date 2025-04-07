@@ -3,6 +3,7 @@ import About from "./components/sections/about";
 import Experience from "./components/sections/experience";
 import Header from "./components/sections/header";
 import Projects from "./components/sections/projects";
+import Technologies from "./components/sections/technologies";
 
 export default function Index() {
   return (
@@ -12,6 +13,7 @@ export default function Index() {
         <About/>
         <Experience/>
         <Projects />
+        <Technologies />
       </main>
     </Layout>
 );

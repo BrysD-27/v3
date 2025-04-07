@@ -6,7 +6,7 @@ import Social from "../social";
 import Link from "next/link";
 
 const StyledHeader = styled.header`
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     width: 48%;
     padding-top: 6rem;
     padding-bottom: 6rem;

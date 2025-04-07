@@ -18,7 +18,7 @@ export const GlobalStyling = createGlobalStyle`
     max-width: 1280px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
       padding-top: 0;
       padding-bottom: 0;
       padding-left: 32px;
@@ -45,7 +45,7 @@ export const GlobalStyling = createGlobalStyle`
   main {
     padding-bottom: 6rem;
     padding-top: 6rem;
-    @media (min-width: 1024px) {
+    @media (min-width: 1025px) {
       position: sticky;
       width:  52%;
     }
@@ -76,7 +76,7 @@ export const Section = styled.section`
 `
 
 export const StyledSection = styled.section`
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     scroll-margin-top: 6rem;
     margin-bottom: 9rem;
   }
@@ -88,7 +88,7 @@ export const StyledSection = styled.section`
 export const StyledHeading = styled.div`
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     width: 1px;
     height: 1px;
     padding: 0;
