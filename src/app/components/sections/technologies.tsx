@@ -95,8 +95,8 @@ const StyledTechDiv = styled.div`
 
 const Technologies = () => {
   return (
-    <StyledSection>
-      <StyledHeading id="technologies" aria-label="Technologies">
+    <StyledSection id="technologies" aria-label="Technologies">
+      <StyledHeading>
         <h2>Technologies</h2>
       </StyledHeading>
       <StyledGroupList>

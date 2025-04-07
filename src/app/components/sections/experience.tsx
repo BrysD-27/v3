@@ -168,8 +168,8 @@ const StyledTitleAnchor = styled.a`
 
 const Experience = () => {
   return (
-    <StyledSection>
-      <StyledHeading id="experience" aria-label="Work experience">
+    <StyledSection id="experience" aria-label="Work experience">
+      <StyledHeading>
         <h2>Experience</h2>
       </StyledHeading>
       <StyledGroupList>

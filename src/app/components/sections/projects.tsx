@@ -7,8 +7,8 @@ import {
 
 const Projects = () => {
   return (
-    <StyledSection>
-      <StyledHeading id="projects" aria-label="Projects">
+    <StyledSection id="projects" aria-label="Projects">
+      <StyledHeading>
         <h2>Projects</h2>
       </StyledHeading>
       <StyledParagraph>Projects coming soon...</StyledParagraph>
