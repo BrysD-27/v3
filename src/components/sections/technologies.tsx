@@ -52,7 +52,7 @@ export const StyledTechHeading = styled.div`
 `;
 
 export const StyledSubHeading = styled.div`
-  padding-top: 1.25rem;
+  padding-top: 1rem;
   padding-bottom: 0.25rem;
   white-space: nowrap;
 
@@ -67,7 +67,9 @@ export const StyledSubHeading = styled.div`
 const StyledUnorderedList = styled.ul`
   flex-wrap: wrap;
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   display: flex;
+  padding-left: .8rem;
   div {
     display: flex;
     align-items: center;
@@ -89,8 +91,8 @@ const StyledTechCategoryDiv = styled.div`
 `;
 
 const StyledTechDiv = styled.div`
-  padding-left: 1.5rem;
-  padding-bottom: 1.25rem;
+  padding-left: 3rem;
+  padding-bottom: .25rem;
 `;
 
 const Technologies = () => {
@@ -113,7 +115,7 @@ const Technologies = () => {
                 {Object.entries(value).map(([propKey, propValue]) => (
                   <StyledTechDiv key={propKey}>
                     <StyledSubHeading>
-                      <h5>{propKey}</h5>
+                      <h5>&ndash; {propKey}</h5>
                     </StyledSubHeading>
                     <StyledUnorderedList>
                       {propValue.map((item, i) => (
