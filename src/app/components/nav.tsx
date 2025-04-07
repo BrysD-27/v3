@@ -38,7 +38,7 @@ const StyledLinks = styled.div`
         display: flex;
         align-items: center;
         margin-top: 2px;
-        padding: .9rem .9rem .9rem 0;
+        padding: 0.9rem 0.9rem 0.9rem 0;
         width: 100%;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -62,7 +62,8 @@ const StyledLinks = styled.div`
       }
     }
 
-    a:hover, a.active {
+    a:hover,
+    a.active {
       background-color: #27272a80;
       box-shadow: inset 0 1px 0 0 rgb(244 244 245 / 0.03);
       color: rgb(228 228 231 / var(--tw-text-opacity, 1));
@@ -85,11 +86,11 @@ const Nav = () => {
           }
         });
       },
-      { threshold: 0.6 } // Adjust for sensitivity
+      { threshold: 0.5 }
     );
 
-    navLinks.forEach(({name}) => {
-      console.log(name.toLocaleLowerCase())
+    navLinks.forEach(({ name }) => {
+      console.log(name.toLocaleLowerCase());
       const section = document.getElementById(name.toLowerCase());
       if (section) observer.observe(section);
     });
@@ -103,7 +104,14 @@ const Nav = () => {
         <ol>
           {navLinks.map(({ url, name }, i) => (
             <li key={i}>
-              <Link href={url} className={`${name.toLowerCase() === activeSection ? "active" : ""}`}>{name}</Link>
+              <Link
+                href={url}
+                className={`${
+                  name.toLowerCase() === activeSection ? "active" : ""
+                }`}
+              >
+                {name}
+              </Link>
             </li>
           ))}
         </ol>
