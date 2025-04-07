@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const StyledNav = styled.nav`
   display: none;
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     display: block;
   }
 `;
@@ -79,17 +79,13 @@ const Nav = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        let mostVisible = entries.find(entry => entry.isIntersecting);
-      
-        if (mostVisible?.target.id === navLinks[1].name && entries[0].isIntersecting) {
-          mostVisible = entries[0];
-        }
-  
-        if (mostVisible) {
-          setActiveSection(mostVisible.target.id);
-        }
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
       },
-      { threshold: 0.6 }
+      { threshold: 0.6 } // Adjust for sensitivity
     );
 
     navLinks.forEach(({name}) => {

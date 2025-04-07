@@ -63,3 +63,43 @@ export const experienceInfo = [
     ]
   },
 ];
+
+export const technologies = {
+  'Front-End': {
+    'Languages': [
+      'Javascript',
+      'Typescript',
+      'Razor'
+    ],
+    'Frameworks & Libraries': [
+      'Angular',
+      'React',
+      'Next.js'
+    ],
+    'UI/UX': [
+      'Bootstrap',
+      'Tailwind CSS',
+      'Material UI',
+      'Styled Components'
+    ]
+  },
+  'Back-End': {
+    'Languages': [
+      'Python',
+      'Java',
+      'C#',
+      'C++'
+    ],
+    'Frameworks': [
+      '.NET Core',
+      'Express',
+      'Spring Boot'
+    ],
+    'Databases': [
+      'T-SQL',
+      'PostgresSQL',
+      'MySQL',
+      'MongoDB'
+    ]
+  }
+};
