@@ -13,7 +13,7 @@ const Footer = () => {
       <StyledFooter>
         <StyledParagraph>
           Coded in Visual Studio Code.
-          Built with Next.js and Tailwind CSS, deployed with blank.
+          Built with Next.js and Tailwind CSS, deployed with Vercel.
         </StyledParagraph>
       </StyledFooter>
   );
