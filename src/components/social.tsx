@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { contactinfo } from "@/public/content/data";
+import { contactinfo } from "../../public/content/data";
 import Icon, { IconName } from "./icons/icon";
 
 const StyledSocialList = styled.ul`

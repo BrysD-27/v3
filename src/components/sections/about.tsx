@@ -51,7 +51,7 @@ const StyledFancySpan = styled.span`
 
   &:hover,
   &:focus {
-    cursor: url(/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdiamond.b8577623.ico&w=64&q=75), auto;
+    cursor: url(/images/diamond.ico), auto;
     color: rgb(94 234 212 / var(--tw-text-opacity, 1));
   }
 }

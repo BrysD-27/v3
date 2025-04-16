@@ -1,5 +1,5 @@
 "use client";
-import { experienceInfo } from "@/public/content/data";
+import { experienceInfo } from "../../../public/content/data";
 import { StyledHeading, StyledSection } from "@/styles/globalcomponents";
 import styled from "styled-components";
 

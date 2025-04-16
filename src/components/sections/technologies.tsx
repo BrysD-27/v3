@@ -3,7 +3,7 @@ import { StyledHeading, StyledSection } from "@/styles/globalcomponents";
 import styled from "styled-components";
 import ReactIcon from "../icons/react";
 import DatabaseIcon from "../icons/database";
-import { technologies } from "@/public/content/data";
+import { technologies } from "../../../public/content/data";
 
 const StyledGroupList = styled.div`
   div {

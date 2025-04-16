@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { navLinks } from "@/public/content/data";
+import { navLinks } from "../../public/content/data";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
