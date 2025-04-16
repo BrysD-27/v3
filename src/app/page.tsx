@@ -1,10 +1,22 @@
-import BackgroundAnimation from "@/components/BackgroundAnimation/background-animation";
-export default function Home() {
+import Layout from "../components/layout";
+import About from "../components/sections/about";
+import Experience from "../components/sections/experience";
+import Footer from "../components/sections/footer";
+import Header from "../components/sections/header";
+import Projects from "../components/sections/projects";
+import Technologies from "../components/sections/technologies";
+
+export default function Index() {
   return (
-    <div id="root" className="bg-background text-white font-default">
-      <BackgroundAnimation />
-      {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-      </footer> */}
-    </div>
-  );
+    <Layout>
+      <Header/>
+      <main>
+        <About/>
+        <Experience/>
+        <Projects />
+        <Technologies />
+        <Footer />
+      </main>
+    </Layout>
+);
 }

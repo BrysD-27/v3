@@ -19,8 +19,8 @@
     "jsx": "preserve",
         "baseUrl": ".",
         "paths": {
-          "@/config/*": ["config/*"],
-          "@/components/*": ["app/components/*"]
+          "@/*": ["*"],
+          "@/components/*": ["components/*"],
         },
     "plugins": [
       {
@@ -30,7 +30,7 @@
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
+    "styles/globalcomponents/index.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
