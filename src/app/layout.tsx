@@ -18,6 +18,10 @@ export default function RootLayout({
         <meta property="og:url" content={metadata.url} />
         <meta property="og:image" content={metadata.image} />
         <meta property="og:type" content="website" />
+
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content={metadata.image} />
       </Head>
       <body className={`antialiased`}>{children}</body>
     </html>
