@@ -5,7 +5,7 @@ export const metadata = {
   keywords: "nextjs, react, bryson, software, engineer, fullstack, developer",
   author: "Bryson Davis",
   url: "https://www.brysondaviscode.com",
-  image: "",
+  image: "https://www.brysondaviscode.com/images/thumbnail.PNG",
 };
 
 export const navLinks = [
