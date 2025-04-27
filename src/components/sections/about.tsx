@@ -83,7 +83,7 @@ const About = () => {
           modern UI/UX standards to deliver an inclusive user experience.
         </StyledParagraph>
         <StyledParagraph>
-          Additionally, I am pursuing a Computer Science education at university
+          Additionally, I am pursuing a Computer Science education at Oregon State University
           to deepen my understanding of algorithms, data structures, and
           mathematical reasoning, applying these principles to build efficient
           and maintainable software.
